@@ -1,6 +1,8 @@
+package Three;
+
 import java.util.Random;
 
-public class Three {
+public class ThreeOne {
     public static void main(String[] args) {
         int[] a = new int[20];
         int min = 10;
