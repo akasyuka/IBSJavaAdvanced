@@ -8,18 +8,21 @@ public class CalculatorIntegerImpl extends CalculatorInteger {
     }
 
     public String sum() {
-        return String.valueOf(this.one + this.two);
+        return String.valueOf(one + two);
     }
 
     public String sub() {
-        return String.valueOf(this.one - this.two);
+        return String.valueOf(one - two);
     }
 
     public String mult() {
-        return String.valueOf(this.one * this.two);
+        return String.valueOf(one * two);
     }
 
-    public String div() {
+    public String div() throws CustomNullException {
+        if (two == 0) {
+            throw new CustomNullException("На ноль делить нельзя", String.valueOf(two));
+        }
         return String.valueOf(this.one / this.two);
     }
 

@@ -8,19 +8,22 @@ public class CalculatorFloatImpl extends CalculatorFloat {
     }
 
     public String sum() {
-        return String.valueOf(this.one + this.two);
+        return String.valueOf(one + two);
     }
 
     public String sub() {
-        return String.valueOf(this.one - this.two);
+        return String.valueOf(one - two);
     }
 
     public String mult() {
-        return String.valueOf(this.one * this.two);
+        return String.valueOf(one * two);
     }
 
-    public String div() {
-        return String.valueOf(this.one / this.two);
+    public String div() throws CustomNullException {
+        if (two == 0) {
+            throw new CustomNullException("На ноль делить нельзя", String.valueOf(two));
+        }
+        return String.valueOf(one / two);
     }
 
     public float getOne() {

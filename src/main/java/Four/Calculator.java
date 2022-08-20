@@ -9,7 +9,7 @@ public interface Calculator {
         return null;
     }
 
-    default String div() {
+    default String div() throws CustomNullException {
         return null;
     }
 
