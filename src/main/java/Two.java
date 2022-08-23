@@ -40,12 +40,15 @@ public class Two {
             in.nextLine();
             System.out.print("Введите слова для заполнения массива: ");
             String[] w = new String[s];
+            String maxWord ="";
             for (int i = 0; i < s; i++) {
                 w[i] = in.nextLine();
+                if (w[i].length() > maxWord.length()) {
+                    maxWord= w[i];
+                }
             }
 
-            Arrays.sort(w);
-            System.out.println(w[s-1]);
+            System.out.println("Самое длинное слово: " + maxWord);
         }
         in.close();
     }

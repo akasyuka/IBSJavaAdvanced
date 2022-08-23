@@ -1,5 +1,7 @@
 package Four;
 
+import Six.CustomNullException;
+
 public class CalculatorFloatImpl extends CalculatorFloat {
 
     public CalculatorFloatImpl(float one, float two) {

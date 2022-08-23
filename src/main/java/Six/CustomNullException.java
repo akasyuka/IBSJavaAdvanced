@@ -1,4 +1,4 @@
-package Four;
+package Six;
 
 public class CustomNullException extends Exception{
     private String num;

@@ -1,5 +1,7 @@
 package Four;
 
+import Six.CustomNullException;
+
 public interface Calculator {
     default String sum() {
         return null;

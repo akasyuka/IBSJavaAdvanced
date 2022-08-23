@@ -1,5 +1,7 @@
 package Four;
 
+import Six.CustomNullException;
+
 public class CalculatorIntegerImpl extends CalculatorInteger {
 
     public CalculatorIntegerImpl(int one, int two) {

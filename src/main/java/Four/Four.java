@@ -1,6 +1,8 @@
 package Four;
 
 
+import Six.CustomNullException;
+
 public class Four {
     public static void main(String[] args) {
         Calculator calculatorInteger = new CalculatorIntegerImpl(3, 0);
