@@ -5,21 +5,13 @@ public class Sweet {
     private String name;
     private float weight;
     private int price;
-    private String feature;
-    public Sweet(String name, float weight, int price, String feature) {
+    public Sweet(String name, float weight, int price) {
         this.name = name;
         this.weight = weight;
         this.price = price;
-        this.feature = feature;
     }
 
-    public String getFeature() {
-        return feature;
-    }
 
-    public void setFeature(String feature) {
-        this.feature = feature;
-    }
 
     public String getName() {
         return name;
@@ -43,5 +35,13 @@ public class Sweet {
 
     public void setPrice(int price) {
         this.price = price;
+    }
+
+    public Object getSpecialty() {
+        return "Пустота";
+    }
+
+    public String getAbout() {
+        return "Пустота";
     }
 }

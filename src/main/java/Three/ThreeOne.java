@@ -24,5 +24,9 @@ public class ThreeOne {
         }
         System.out.println("Минимальный среди положительных под индексом " + imin + " равняется " + min);
         System.out.println("Максимальный среди отрицательных под индексом " + imax + " равняется " + max);
+        System.out.println("Меняем местами");
+        int t = a[imin];
+        a[imin] = a[imax];
+        a[imax] = t;
     }
 }
