@@ -7,4 +7,5 @@ public class CustomNullException extends Exception{
         super(message);
         this.num = num;
     }
+
 }

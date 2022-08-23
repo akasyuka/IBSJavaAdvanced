@@ -7,10 +7,15 @@ import Six.CustomNullException;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
+import static org.junit.jupiter.api.Assertions.assertThrows;
+import static org.junit.jupiter.api.Assertions.assertTrue;
+
 class CalculatorImplTest {
 
         Calculator calcInt = new CalculatorIntegerImpl(6, 2);
         Calculator calcFloat = new CalculatorFloatImpl(9F, 3F);
+        Calculator calcIntNull = new CalculatorFloatImpl(5,0);
+        Calculator calcFloatNull = new CalculatorFloatImpl(2F,0F);
 
 
     @Test
@@ -66,5 +71,26 @@ class CalculatorImplTest {
         String expected = "3.0";
         String actually = calcFloat.div();
         Assertions.assertEquals(expected,actually);
+    }
+
+    @Test
+    void divIntegerNullExceptionTest() {
+        CustomNullException thrown = assertThrows(
+                CustomNullException.class,
+                () -> calcIntNull.div(),
+                "Ожидалось исключение"
+        );
+
+        assertTrue(thrown.getMessage().contains("На ноль делить нельзя"));
+    }
+    @Test
+    void divFloatNullExceptionTest() {
+        CustomNullException thrown = assertThrows(
+                CustomNullException.class,
+                () -> calcFloatNull.div(),
+                "Ожидалось исключение"
+        );
+
+        assertTrue(thrown.getMessage().contains("На ноль делить нельзя"));
     }
 }
